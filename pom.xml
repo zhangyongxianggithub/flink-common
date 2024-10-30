@@ -11,7 +11,23 @@
     <properties>
         <flink.version>1.13.1</flink.version>
         <flink.scala.version>2.12</flink.scala.version>
-        <jackson.version>2.14.0-rc1</jackson.version>
+        <jackson.version>2.18.0</jackson.version>
+        <java.version>8</java.version>
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <guava.version>33.3.1-jre</guava.version>
+        <kafka-clients.version>3.4.0</kafka-clients.version>
+        <flink-doris-connector.version>1.0.3</flink-doris-connector.version>
+        <client-java.version>16.0.2</client-java.version>
+        <freemarker.version>2.3.29</freemarker.version>
+        <mysql-connector-java.version>8.0.21</mysql-connector-java.version>
+        <feign.version>11.9.1</feign.version>
+        <jodd.version>5.1.6</jodd.version>
+        <snakeyaml.version>1.24</snakeyaml.version>
+        <lombok.version>1.18.34</lombok.version>
+        <mockito.version>3.1.0</mockito.version>
+        <slf4j.version>1.7.29</slf4j.version>
     </properties>
     <dependencies>
         <dependency>
@@ -35,7 +51,7 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.7.29</version>
+            <version>${slf4j.version}</version>
             <scope>provided</scope>
         </dependency>
         <!--上面是provided依赖-->
@@ -43,17 +59,17 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-inline</artifactId>
-            <version>3.1.0</version>
+            <version>${mockito.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>${lombok.version}</version>
         </dependency>
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
-            <version>1.24</version>
+            <version>${snakeyaml.version}</version>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -78,27 +94,27 @@
         <dependency>
             <groupId>org.jodd</groupId>
             <artifactId>jodd-core</artifactId>
-            <version>5.1.6</version>
+            <version>${jodd.version}</version>
         </dependency>
         <!--下面是可选的依赖-->
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-okhttp</artifactId>
             <optional>true</optional>
-            <version>11.9.1</version>
+            <version>${feign.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-core</artifactId>
             <optional>true</optional>
-            <version>11.9.1</version>
+            <version>${feign.version}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
             <optional>true</optional>
-            <version>8.0.21</version>
+            <version>${mysql-connector-java.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -110,19 +126,19 @@
             <groupId>org.freemarker</groupId>
             <artifactId>freemarker</artifactId>
             <optional>true</optional>
-            <version>2.3.29</version>
+            <version>${freemarker.version}</version>
         </dependency>
         <dependency>
             <groupId>io.kubernetes</groupId>
             <artifactId>client-java</artifactId>
             <optional>true</optional>
-            <version>16.0.2</version>
+            <version>${client-java.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.doris</groupId>
             <artifactId>flink-doris-connector-1.13_${flink.scala.version}</artifactId>
             <optional>true</optional>
-            <version>1.0.3</version>
+            <version>${flink-doris-connector.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
@@ -139,8 +155,13 @@
         <dependency>
             <groupId>org.apache.kafka</groupId>
             <artifactId>kafka-clients</artifactId>
-            <version>3.4.0</version>
+            <version>${kafka-clients.version}</version>
             <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
     </dependencies>
 
